@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(20,20,20);
+    font-family: Verdana, sans-serif;
+    height: 720px;
+    overflow: hidden;
+}
+h2 {
+    margin: 5px 37px;
+}
+p {
+}
+h2, p{
+    color: rgb(200,200,200);
+}
+#hub{
+    position: relative;
+    top: 0px;
+    left: 1px;
+    width: 1280px;
+    height: 720px;
+    /*outline: 1px solid red;*/
+    overflow: hidden;
+    background-image: url("../img/MH.jpg");
+}
+#movieLibBG{
+    overflow: hidden;
+    z-index: 1;
+    position: absolute;
+}
+#movieLib {
+    position: relative;
+    top: 150px;
+    left: 1515px;
+    z-index: 1;
+}
+.movBox {
+    float: left;
+    width: 350px;
+    text-align: center;
+}
+
+.movTit{
+    position: absolute;
+    top: 0;
+    left: 37%;
+    z-index: 10;
+}
+.backdrop{
+    display: none;
+    height: 100%;
+    width: auto;
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
+    z-index: 0;
+}
+
+.poster{
+    position: relative;
+    /*border-radius: 5px;*/
+    height: 400px;
+    width: 270px;
+    z-index: 5;
+    transform: perspective(700px) translate3d(0,0,-100px) rotate3d(0, 1, 0, 0);
+    transition: all 0.4s ease;
+    /*box-shadow: 0 2px 5px rgba(0,0,0,0.5);*/
+}
+
+.posterOut{
+    transform: perspective(700px) translate3d(0,0,100px);
+    z-index: 8;
+}
+.posterTurnOut{
+    transform: perspective(700px) rotate3d(0, 1, 0, 20deg);
+}
+.posterTurnIn{
+    transform: perspective(700px) rotate3d(0, 1, 0, -20deg);
+}
+.overbox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    display: none;
+}
+
+#search, #info{
+    position: absolute;
+    left: 2px;
+    width: 1264px;
+    height: 31px;
+    margin: 5px;
+    border: 1px solid rgba(80,80,80,1);
+    background-color: rgba(0,0,0,0.7);
+    z-index: 21;
+}
+#search{
+    top: -50px;
+}
+#search .ui-widget{
+    position: relative;
+    top: 3px;
+    width: 600px;
+    left: 335px;
+}
+.ui-widget {
+	font-family: Verdana,Arial,sans-serif;
+	font-size: 1.1em;
+}
+.ui-widget .ui-widget {
+	font-size: 1.1em;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-family: Verdana,Arial,sans-serif;
+	font-size: 1.1em;
+    background: black;
+    border: 1px solid darkgray;
+    border-radius: 3px;
+    color: darkgray;
+    /*border-style: none;*/
+
+}
+.ui-widget.ui-widget-content {
+    border-radius: 3px;
+}
+.ui-widget-content {
+	background: black;
+	color: darkgray;
+}
+
+input:focus {
+    outline:0;
+}
+#tags{
+    width: 600px;
+}
+#info{
+    top: 720px;
+}
+.gbox{
+    display: none;
+    position: absolute;
+}
+.genre {
+    float: left;
+    padding: 5px 15px;
+}
+.runtime{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 15px;
+}
